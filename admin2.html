@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ТНС Энерго - Опросы</title>
     <style>
- * {
+        /* Основные стили */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -37,8 +37,8 @@
             height: 70px;
             width: 170px;
         }
-        
-    
+                
+        /* Навигационное меню */
         .nav {
             min-height: 91vh;
             width: 250px;
@@ -87,8 +87,6 @@
             cursor: pointer;
         }
 
-
-
         .nav-img {
             width: 30px;
             height: 30px;
@@ -122,9 +120,9 @@
         }
 
         .option1 {
-            border-left: 5px solidrgb(255, 255, 255);
-            background-color:rgb(255, 255, 255);
-            color: black;
+            border-left: 5px solid #6aae95;
+            background-color: #1a315e;
+            color: white;
             cursor: pointer;
         }
 
@@ -175,18 +173,6 @@
             cursor: pointer;
         }
 
-/* Добавляем этот стиль в раздел стилей */
-.nav-option.option5 {
-        border-left: 5px solid #6aae95;
-        background-color: #1a315e;
-        color: white;
-    }
-    
-    .nav-option.option5:hover {
-        border-left: 5px solid #1a315e;
-        background-color: #1a315e;
-    }
-
         .message {
             gap: 40px;
             position: relative;
@@ -221,7 +207,7 @@
             top: 70px;
             z-index: 1;
         }
-       
+        
         .dashboard {
             flex: 1;
             padding: 20px;
@@ -230,7 +216,7 @@
 
         button {
             background-color: var(--primary-color);
-            color: white;
+            color: #000;
             border: none;
             padding: 10px 15px;
             border-radius: 5px;
@@ -240,7 +226,7 @@
         button:hover {
             background-color: var(--secondary-color);
         }
-        
+                
         .has-meeting {
             background-color:#6aae95;
         }
@@ -251,7 +237,7 @@
             font-size: 28px;
             font-weight: bold;
         }
-        
+                
         .close:hover,
         .close:focus {
             color: black;
@@ -276,19 +262,19 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
-        
+                
         .document-header {
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 15px;
             color: #333;
         }
-        
+                
         .document-content {
             margin-bottom: 15px;
             line-height: 1.5;
         }
-        
+                
         .document-footer {
             display: flex;
             justify-content: space-between;
@@ -297,15 +283,15 @@
             border-top: 1px solid #eee;
             padding-top: 10px;
         }
-        
+                
         .document-number {
             font-weight: bold;
         }
-        
+                
         .document-author {
             color: #333;
         }
-        
+                
         .document-time {
             color: #999;
         }
@@ -394,7 +380,7 @@
             font-weight: bold;
         }
 
-        .form-group input, 
+        .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 10px;
@@ -499,7 +485,7 @@
             justify-content: space-between;
             margin-bottom: 5px;
         }
-        
+                
         /* Стили для таймера */
         .timer-container {
             margin: 15px 0;
@@ -508,23 +494,23 @@
             border-radius: 5px;
             text-align: center;
         }
-        
+                
         .timer {
             font-size: 18px;
             font-weight: bold;
             color: #1a315e;
         }
-        
+                
         .timer-expired {
             color: #d9534f;
         }
-        
+                
         .timer-label {
             font-size: 14px;
             color: #666;
             margin-bottom: 5px;
         }
-        
+                
         .poll-status {
             display: inline-block;
             padding: 3px 8px;
@@ -532,22 +518,22 @@
             font-size: 12px;
             font-weight: bold;
         }
-        
+                
         .status-active {
             background-color: #5cb85c;
             color: white;
         }
-        
+                
         .status-ended {
             background-color: #d9534f;
             color: white;
         }
-        
+                
         /* Стили для описания опроса */
         .poll-description {
             display: none; /* Скрываем описание в списке */
         }
-        
+                
         .vote-description {
             display: block; /* Показываем описание при голосовании */
             color: #666;
@@ -558,7 +544,7 @@
             border-radius: 5px;
             line-height: 1.6;
         }
-        
+                
         /* Стили для протокола */
         #protocolModal .modal-content {
             max-height: 80vh; /* Ограничиваем высоту */
@@ -580,7 +566,7 @@
             border-radius: 5px;
             margin-top: 50px;
         }
-        
+                
         .protocol-title {
             font-size: 16pt;
             font-weight: bold;
@@ -588,27 +574,27 @@
             margin-bottom: 20px;
             text-transform: uppercase;
         }
-        
+                
         .protocol-section {
             margin-bottom: 15px;
         }
-        
+                
         .protocol-section-title {
             font-weight: bold;
             margin-bottom: 10px;
             text-align: center;
         }
-        
+                
         .protocol-text {
             margin-bottom: 10px;
             text-indent: 20px;
         }
-        
+                
         .protocol-signature {
             margin-top: 100px;
             text-align: right;
         }
-        
+                
         .protocol-signature-line {
             display: inline-block;
             width: 300px;
@@ -616,7 +602,7 @@
             margin-left: 20px;
             position: relative;
         }
-        
+                
         .protocol-signature-name {
             position: absolute;
             bottom: -20px;
@@ -624,14 +610,14 @@
             font-size: 12pt;
             font-style: italic;
         }
-        
+                
         .protocol-actions {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 20px;
         }
-        
+                
         .protocol-btn {
             padding: 10px 20px;
             background-color: #1a315e;
@@ -640,9 +626,42 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        
+                
         .protocol-btn:hover {
             background-color: #2a4a8a;
+        }
+
+        /* Стили для логотипа в протоколе */
+        .protocol-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .protocol-logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        /* Стили для кнопки остановки голосования */
+        .stop-poll-btn {
+            background-color: #d9534f;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stop-poll-btn:hover {
+            background-color: #c9302c;
+        }
+
+        .stop-poll-btn i {
+            font-size: 16px;
         }
     </style>
     <!-- Подключаем иконки Font Awesome -->
